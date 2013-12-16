@@ -6,6 +6,7 @@ alias r='rails'
 alias ll='ls -l'
 alias m='/Applications/Mou.app/Contents/MacOS/Mou'
 
+source ~/.profile 
 #export PS1="\w$"
 find_git_branch () {
   local dir=. head
@@ -29,11 +30,8 @@ PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
 #PS1="\u@\h:\w\$git_branch\$ "
 PS1="\[\e[36;1m\]\w\$git_branch ✗ \[\e[0m\]"
 
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 export CLICOLOR=1
 export GREP_OPTIONS="--color=auto"
-#source /Users/lin/.rvm/scripts/rvm
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -43,3 +41,5 @@ export PATH="$MAGICK_HOME/bin:$PATH"
 #export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
 export PKG_CONFIG_PATH="$MAGICK_HOME/lib/pkgconfig/"
 
+
+#[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
